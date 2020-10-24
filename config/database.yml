@@ -2,17 +2,18 @@ default: &default
   adapter: postgis
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: caio
-  password: 12345678
-  host: localhost
+  username: rails
+  password: cafeehbom
+  host: 206.189.190.11
+  port: 5432
 
 development:
   <<: *default
-  database: find_my_coffee_development
+  database: find_my_coffee_caio_development
 
 test:
   <<: *default
-  database: find_my_coffee_test
+  database: find_my_coffee_caio_test
 
 production:
   <<: *default
